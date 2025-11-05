@@ -1,0 +1,181 @@
+/* Container */
+.container {
+  background-color: #121212;
+  min-height: 100vh;
+  padding: 0 20px;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 2px solid #f04e30;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: #f04e30;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Filter + User Buttons row */
+.filter-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  max-width: 1200px;
+  margin: 20px auto;
+  flex-wrap: nowrap;
+}
+
+.filter-buttons,
+.user-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-buttons button,
+.user-buttons button {
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #444;
+  color: #fff;
+}
+
+.filter-buttons button.active {
+  background-color: #f04e30;
+}
+
+.user-buttons button.watch {
+  background-color: #32CD32;
+}
+
+.user-buttons button.cart {
+  background-color: #00BFFF;
+}
+
+/* Search + Category Filter */
+.search-filter {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.search-filter input,
+.search-filter select {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  font-size: 1rem;
+  flex: 1;
+}
+
+/* Movies Grid */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+}
+
+.movie-card {
+  background: #1f1f1f;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.movie-card h3 {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.movie-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #bbb;
+}
+
+.movie-card button {
+  margin-top: 8px;
+  padding: 6px 12px;
+  background-color: #f04e30;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  padding: 10px;
+}
+
+.modal-content {
+  background: #181818;
+  border-radius: 10px;
+  max-width: 700px;
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.modal-content img,
+.modal-content iframe {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.modal-content button {
+  margin-top: 12px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+}
+
+.modal-close {
+  background: #555;
+}

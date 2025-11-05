@@ -1,0 +1,125 @@
+/* Login.css */
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.logoTop {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #f04e30;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.formWrapper {
+  background-color: rgba(0,0,0,0.6);
+  padding: 60px 50px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.formWrapper {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 60px 50px;
+  border-radius: 12px;
+  width: 90%;        /* responsive */
+  max-width: 500px;  /* ไม่เกิน 500px */
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+.signInBtn {
+  padding: 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.signInBtn:hover {
+  background-color: #0056b3;
+}
+
+.forgot {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #ccc;
+  cursor: pointer;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.signupText {
+  margin-top: 25px;
+  font-size: 0.95rem;
+  color: #fff;
+  text-align: center;
+}
+
+.signupBtn {
+  color: #28a745;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.error {
+  color: #ff6b6b;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Responsive สำหรับหน้าจอเล็ก */
+@media (max-width: 480px) {
+  .formWrapper {
+    padding: 40px 30px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .input {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .signInBtn {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}

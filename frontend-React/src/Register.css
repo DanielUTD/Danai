@@ -1,0 +1,97 @@
+/* Register.css */
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  background-image: url("./movix-bg.jpg"); /* ใส่ไฟล์ภาพใน public */
+}
+
+.logoTop {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #f04e30;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.formWrapper {
+  background-color: rgba(0,0,0,0.6);
+  padding: 60px 50px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+.button {
+  width: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.message {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.message.success {
+  color: #28a745;
+}
+
+.message.error {
+  color: #ff6b6b;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .formWrapper {
+    padding: 40px 30px;
+  }
+
+  .logoTop {
+    font-size: 2.2rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .input, .button {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}

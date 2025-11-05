@@ -1,0 +1,279 @@
+/* =========================
+   Home.css
+========================= */
+
+/* ------------------------
+   Active Menu
+------------------------ */
+.active-menu {
+  color: #0011ff;      /* เปลี่ยนสีฟ้า */
+  font-weight: 700;     /* หนาขึ้นเล็กน้อย */
+  text-decoration: underline; /* ใต้ข้อความ */
+  transition: all 0.3s;
+}
+
+/* ------------------------
+   Home Container
+------------------------ */
+.home-container {
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ------------------------
+   Header
+------------------------ */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 40px;
+  background: #111;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #0011ff;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+  margin: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.nav-links {
+  display: flex;
+  margin-left: 30px;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0011ff;
+}
+
+.login-btn {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #0011ff;
+  border-color: #0011ff;
+  color: #fff;
+}
+
+/* ------------------------
+   Banner
+------------------------ */
+.banner {
+  height: 600px;
+  background: url("https://firebasestorage.googleapis.com/v0/b/movix-1e709.firebasestorage.app/o/Movix%2Fmovix-bg.jpg?alt=media&token=a040192d-b100-4335-8225-9c17189b0b42") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.banner-overlay {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.banner-text {
+  font-size: 70px;
+  font-weight: 900;
+  color: white;
+  text-shadow: 3px 3px 10px #000;
+  margin: 0;
+}
+
+.banner-sub {
+  margin-top: 15px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* ------------------------
+   Movies Carousel
+------------------------ */
+.movie-row {
+  margin: 40px;
+  position: relative;
+}
+
+.carousel-container {
+  position: relative;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.9);
+}
+
+.carousel-btn.left {
+  left: 0;
+}
+
+.carousel-btn.right {
+  right: 0;
+}
+
+/* Slider */
+.movie-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 15px 0;
+  scrollbar-width: none; /* Firefox */
+}
+
+.movie-slider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* Movie Card */
+.movie-card {
+  flex: 0 0 auto;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.movie-card img {
+  width: 240px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.movie-card:hover img {
+  transform: scale(1.12);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .movie-card img {
+    width: 180px;
+    height: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-card img {
+    width: 140px;
+    height: 200px;
+  }
+}
+
+/* ------------------------
+   Modal
+------------------------ */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #111;
+  padding: 25px;
+  border-radius: 14px;
+  width: 85%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  color: #fff;
+  box-shadow: 0px 0px 30px rgba(0,0,0,0.7);
+  animation: fadeInUp 0.3s ease;
+}
+
+.modal-poster {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: crimson;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  background: darkred;
+}
+
+/* ------------------------
+   Animation
+------------------------ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
